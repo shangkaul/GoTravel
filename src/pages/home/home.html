@@ -1,14 +1,40 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+
+  <ion-navbar color="dark">
+    <ion-title>Go Travel</ion-title>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+
+<ion-content style="background-color: black;" padding>
+  <ion-list id="chatMessages">
+    <ion-item *ngFor="let message of messages" [class]="message.specialMessage ? 'message special': 'message'">
+      <ion-avatar *ngIf="message.username!=username" item-start><img class="avt" src="assets/imgs/bot-avatar.png">
+      </ion-avatar>
+      <div [class]="message.username != username ? 'innerMessage messageLeft': 'innerMessage messageRight'">
+
+        <div *ngIf="message.username==username" class="username">{{message.username}}</div>
+        <div class="messageContent" text-wrap [innerHTML]="message.message"></div>
+        <div class="date">{{message.date}}</div>
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>
+<ion-footer>
+
+  <ion-toolbar color="dark">
+
+    <textarea spellcheck="true" autoComplete="true" autocorrect="true" rows="1" class="chat-input" [(ngModel)]="message"
+      placeholder="Type something..." (keyup.enter)="sendMessage()">
+        </textarea>
+
+    <ion-buttons right>
+      <button (click)="sendMessage()" ion-button icon-only item-right class="send-chat-button" color="primary">
+        <ion-icon name="md-send"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+</ion-footer>

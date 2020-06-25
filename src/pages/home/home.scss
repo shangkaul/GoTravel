@@ -1,3 +1,134 @@
 page-home {
+    .chatMessages{
+        min-height: 100%;
+    }
+     .innerMessage{
+         display:inline-block;
+         padding: 5px 10px;
+         background: color($colors,'primary');
+        margin:5px;
+        color:darkgrey;
+        border-radius: 3px;
+ }
+ .avt{
+     border-radius: 25px;
+     margin-top: 10px;
+     height: 40px;
+     width: 40px;
+     position: relative;
+     float: left;
+     margin-right: 10px;
+ }
 
-}
+ .username{
+     font-weight: bold;
+     font-size:80%;
+    //  font-family: Roboto;
+     padding-bottom: 10px;
+     color: #28BABC;
+ }
+ .message{
+     font-size: 120%;
+    //  font-family: Roboto;
+ 
+ }
+ .elem button{
+     border-radius:0;
+     margin:0;
+     height:100%;
+ }
+ div#footer div.elem:first-child{
+     flex-grow:1;
+ }
+ div#footer{
+     display: flex;
+     flex-direction: row;
+     align-items: stretch;
+ }
+ ion-input{
+     padding-left:15px;
+     font-size:125%;
+ }
+ textarea {
+     width: calc(100% - 20px);
+     margin-left: 10px;
+     background-color: #272727;
+     font-size: 125%;
+     resize: none;
+     border: none;
+     color: darkgray;
+ }  
+ 
+ .chat-message {
+     padding: 20px;
+     border-radius: 5px; 
+     background-color: #fff;
+     white-space: normal;
+ }
+ .message:after{
+     content:'';
+     display:block;
+     clear:both;
+ }
+ .messageLeft{
+     float:left;
+     max-width: 75%;
+     overflow: hidden;
+     background: #232323;
+     padding: 15px;
+     border-radius: 25px;
+     margin-top: 0;
+
+ }
+ .messageRight{
+     float:right;
+     max-width: 75%;
+     overflow: hidden;
+     background: #232323;
+     padding: 15px;
+     border-radius: 25px;
+     margin-top: 0;
+ }
+ .message.special .innerMessage .messageContent{
+     background: white;
+     display:inline-block;
+     padding:0 10px;
+ }
+ .message.special .innerMessage:before{
+     content:'';
+     height: 2px;
+     background: #eee;
+     display: block;
+     top:50%;
+     position: absolute;
+     left:0;
+     width:100%;
+     z-index:-1;
+ }
+ .message.special .innerMessage{
+ background:transparent;
+ color:black;
+ font-size: 80%;
+ width:100%;
+ float :none;
+ text-align:center;
+ position: relative;
+ 
+ }
+ .bar-button-md {
+     margin-left: 0.8rem !important;
+     margin-right: 0.8rem !important;
+ }
+ .pro{
+     font-size:20px;
+ }
+ .con{
+     font-size: 31px;
+ }
+ .label-md{
+     margin:5px;
+ }
+ }
+ page-home ion-input{
+     background: #222222;
+ }
