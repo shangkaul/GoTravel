@@ -1,4 +1,12 @@
 page-home {
+
+    ion-page{
+        background-color: pink;
+
+    }
+    ion-content{
+        background-color: pink;;
+    }
     .chatMessages{
         min-height: 100%;
     }
@@ -31,7 +39,11 @@ page-home {
      font-size:80%;
     //  font-family: Roboto;
      padding-bottom: 10px;
-     color: #28BABC;
+     color: white;
+     -webkit-text-fill-color: black;
+     -webkit-text-stroke-width: thin;
+     -webkit-text-stroke-color:white ;
+
  }
  .message{
      font-size: 120%;
@@ -58,11 +70,11 @@ page-home {
  textarea {
      width: calc(100% - 20px);
      margin-left: 10px;
-     background-color: #272727;
+     background-color: #eb9a79;
      font-size: 125%;
      resize: none;
      border: none;
-     color: darkgray;
+     color: #222;
  }  
  
  .chat-message {
@@ -80,20 +92,22 @@ page-home {
      float:left;
      max-width: 75%;
      overflow: hidden;
-     background: #232323;
+     background: #eb9a79;
      padding: 15px;
      border-radius: 25px;
      margin-top: 0;
+     color:black;
 
  }
  .messageRight{
      float:right;
      max-width: 75%;
      overflow: hidden;
-     background: #232323;
+     background: #fff043;
      padding: 15px;
      border-radius: 25px;
      margin-top: 0;
+     color:black;
  }
  .message.special .innerMessage .messageContent{
      background: white;
@@ -140,7 +154,18 @@ page-home {
  .animm{
      width: 120px;
  }
+ .anim{
+    background-color: pink;
+}
+.toolbar-title-md{
+    text-align: center;
+    color: black;
+}
+.toolbar-md-light .toolbar-title-md {
+    color: #222;
+}
  }
+
  page-home ion-input{
-     background: #222222;
+     background: #eb9a79;
  }

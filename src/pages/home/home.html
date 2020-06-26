@@ -1,13 +1,13 @@
 <ion-header>
 
-  <ion-navbar color="dark">
-    <ion-title>Go Travel</ion-title>
+  <ion-navbar color="light">
+    <ion-title>Go Travel Bot</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content style="background-color: black;" padding>
+<ion-content padding>
   <ion-list id="chatMessages">
     <ion-item *ngFor="let message of messages" [class]="message.specialMessage ? 'message special': 'message'">
       <ion-avatar *ngIf="message.username=='bot'" item-start><img class="avt" src="assets/imgs/bot-avatar.png">
@@ -28,7 +28,7 @@
         </div>
         <div *ngIf=" message.options">
 
-          <button [disabled]="message.clicked" (click)="message.clicked=true;usermsg(option.opt)"
+          <button [disabled]="message.clicked" color="secondary" (click)="message.clicked=true;usermsg(option.opt)"
             style="display: block; width: 100%;" *ngFor="let option of message.options" ion-button
             round>{{option.opt}}</button>
         </div>
@@ -38,14 +38,15 @@
     <div *ngIf="showanim" class="animm">
       <ion-avatar item-start><img class="avt" src="assets/imgs/bot-avatar.png">
       </ion-avatar>
-      <lottie-animation-view (animCreated)="handleAnimation($event)" [options]="interactiveAnimationOption">
+      <lottie-animation-view class="anim" (animCreated)="handleAnimation($event)"
+        [options]="interactiveAnimationOption">
       </lottie-animation-view>
     </div>
   </ion-list>
 </ion-content>
 <ion-footer>
 
-  <ion-toolbar color="dark">
+  <ion-toolbar color="light">
 
     <textarea [disabled]="isDisabled" spellcheck="true" autoComplete="true" autocorrect="true" rows="1"
       class="chat-input" [(ngModel)]="message" placeholder="Type something..." (keyup.enter)="sendMessage()">
@@ -53,7 +54,7 @@
 
     <ion-buttons right>
       <button [disabled]="butDisable" (click)="sendMessage()" ion-button icon-only item-right class="send-chat-button"
-        color="primary">
+        color="dark">
         <ion-icon name="md-send"></ion-icon>
       </button>
     </ion-buttons>
