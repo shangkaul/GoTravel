@@ -8,6 +8,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const routes = require("./routes/routes.js")(app, fs);
 
-const server = app.listen(4040, () => {
+const server = app.listen(process.env.PORT || 4040, () => {
     console.log("listening on port %s...", server.address().port);
 });

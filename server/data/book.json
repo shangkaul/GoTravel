@@ -1,0 +1,126 @@
+[
+    {
+        "message": "Hi there! Welcome to the Go Travel booking services. We are happy to help you! So, choose a mode of transport. ",
+        "clicked": false,
+        "cala": false,
+        "options": [
+            {
+                "opt": "Aeroplane"
+            },
+            {
+                "opt": "Ship/ Cruise"
+            }
+        ]
+    },
+    {
+        "message": "That's neat! Now choose a boarding city(departure).",
+        "clicked": false,
+        "cala": false,
+        "options": [
+            {
+                "opt": "Mumbai"
+            },
+            {
+                "opt": "Chennai"
+            },
+            {
+                "opt": "New Delhi"
+            },
+            {
+                "opt": "Bangalore"
+            },
+            {
+                "opt": "Hyderabad"
+            },
+            {
+                "opt": "Kolkata"
+            }
+        ]
+    },
+    {
+        "message": "Okay now choose your destination.",
+        "clicked": false,
+        "cala": false,
+        "options": [
+            {
+                "opt": "USA"
+            },
+            {
+                "opt": "Europe"
+            },
+            {
+                "opt": "Singapore"
+            },
+            {
+                "opt": "Maldives"
+            },
+            {
+                "opt": "Thailand"
+            }
+        ]
+    },
+    {
+        "message": "Wow. I'm sure you're going to love it there! Choose departure date.",
+        "clicked": false,
+        "cala": true
+    },
+    {
+        "message": "Choose date of return.",
+        "clicked": false,
+        "cala": true
+    },
+    {
+        "message": "Hooray! We are ready. now let's talk money! Set a per person budget.",
+        "clicked": false,
+        "cala": false,
+        "options": [
+            {
+                "opt": "Rs. 50,000"
+            },
+            {
+                "opt": "Rs. 80,000"
+            },
+            {
+                "opt": "Rs. 120,000"
+            },
+            {
+                "opt": "Rs. 1,50,000+"
+            }
+        ]
+    },
+    {
+        "message": "Okay we are ready. One last detail. Choose the number of adults.",
+        "clicked": false,
+        "cala": false,
+        "options": [
+            {
+                "opt": "1"
+            },
+            {
+                "opt": "2"
+            },
+            {
+                "opt": "3"
+            },
+            {
+                "opt": "4"
+            },
+            {
+                "opt": "5"
+            },
+            {
+                "opt": "6+"
+            }
+        ]
+    },
+    {
+        "message": "That's great! We are all set! Our travel agent will contact you within 2 days. Glad to be of service!",
+        "clicked": false,
+        "cala": false,
+        "options": [
+            {
+                "opt": "Okay"
+            }
+        ]
+    }
+]

@@ -10,6 +10,12 @@ page-home {
         color:darkgrey;
         border-radius: 3px;
  }
+ .pfp{
+     text-align: center;
+ }
+ .item-md{
+     color:white;
+    background-color: darkslategrey;}
  .avt{
      border-radius: 25px;
      margin-top: 10px;
@@ -118,6 +124,9 @@ page-home {
  .bar-button-md {
      margin-left: 0.8rem !important;
      margin-right: 0.8rem !important;
+ }
+ .button-md{
+     text-transform: none;
  }
  .pro{
      font-size:20px;

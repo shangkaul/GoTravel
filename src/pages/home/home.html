@@ -10,13 +10,29 @@
 <ion-content style="background-color: black;" padding>
   <ion-list id="chatMessages">
     <ion-item *ngFor="let message of messages" [class]="message.specialMessage ? 'message special': 'message'">
-      <ion-avatar *ngIf="message.username!=username" item-start><img class="avt" src="assets/imgs/bot-avatar.png">
+      <ion-avatar *ngIf="message.username=='bot'" item-start><img class="avt" src="assets/imgs/bot-avatar.png">
       </ion-avatar>
-      <div [class]="message.username != username ? 'innerMessage messageLeft': 'innerMessage messageRight'">
+      <div [class]="message.username == 'bot' ? 'innerMessage messageLeft': 'innerMessage messageRight'">
 
         <div *ngIf="message.username==username" class="username">{{message.username}}</div>
-        <div class="messageContent" text-wrap [innerHTML]="message.message"></div>
-        <div class="date">{{message.date}}</div>
+        <div *ngIf="message.img" class="pfp">
+          <img [src]="message.img">
+        </div>
+        <div class="messageContent" text-wrap [innerHTML]="message.message"></div><br>
+        <div *ngIf="message.cal">
+          <ion-item style="background: transparent;" no-lines>
+            <ion-datetime [disabled]="message.clicked" placeholder="Enter date" displayFormat="MMM DD YYYY"
+              [(ngModel)]="dat" (ionChange)="message.clicked=true;usermsg(dat)">
+            </ion-datetime>
+          </ion-item>
+        </div>
+        <div *ngIf=" message.options">
+
+          <button [disabled]="message.clicked" (click)="message.clicked=true;usermsg(option.opt)"
+            style="display: block; width: 100%;" *ngFor="let option of message.options" ion-button
+            round>{{option.opt}}</button>
+        </div>
+
       </div>
     </ion-item>
   </ion-list>
@@ -25,12 +41,13 @@
 
   <ion-toolbar color="dark">
 
-    <textarea spellcheck="true" autoComplete="true" autocorrect="true" rows="1" class="chat-input" [(ngModel)]="message"
-      placeholder="Type something..." (keyup.enter)="sendMessage()">
+    <textarea [disabled]="isDisabled" spellcheck="true" autoComplete="true" autocorrect="true" rows="1"
+      class="chat-input" [(ngModel)]="message" placeholder="Type something..." (keyup.enter)="sendMessage()">
         </textarea>
 
     <ion-buttons right>
-      <button (click)="sendMessage()" ion-button icon-only item-right class="send-chat-button" color="primary">
+      <button [disabled]="butDisable" (click)="sendMessage()" ion-button icon-only item-right class="send-chat-button"
+        color="primary">
         <ion-icon name="md-send"></ion-icon>
       </button>
     </ion-buttons>

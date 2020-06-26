@@ -1,0 +1,101 @@
+[
+    {
+        "message": "Great choice let's start now where do you want to go?",
+        "clicked": false,
+        "options": [
+            {
+                "opt": "USA"
+            },
+            {
+                "opt": "Australia"
+            },
+            {
+                "opt": "Europe"
+            },
+            {
+                "opt": "Bali"
+            },
+            {
+                "opt": "Maldives"
+            },
+            {
+                "opt": "Singapore"
+            }
+        ]
+    },
+    {
+        "message": "Yoohoo that's a destination to die for! So how many days can you spare?",
+        "clicked": false,
+        "options": [
+            {
+                "opt": "< 5 days"
+            },
+            {
+                "opt": "5-7 days"
+            },
+            {
+                "opt": "8+ days"
+            }
+        ]
+    },
+    {
+        "message": "Oh that's a task. Don't worry GoTravel bot is here to help you plan it. What's your priority?",
+        "clicked": false,
+        "options": [
+            {
+                "opt": "Culture"
+            },
+            {
+                "opt": "Leisure"
+            },
+            {
+                "opt": "Nature"
+            },
+            {
+                "opt": "Adventure"
+            }
+        ]
+    },
+    {
+        "message": "I just need a few more details. Who are you travelling with?",
+        "clicked": false,
+        "options": [
+            {
+                "opt": "Family"
+            },
+            {
+                "opt": "Friends"
+            },
+            {
+                "opt": "Couple"
+            }
+        ]
+    },
+    {
+        "message": "Lucky you! So what's the per person budget?",
+        "clicked": false,
+        "options": [
+            {
+                "opt": "Rs. 50,000"
+            },
+            {
+                "opt": "Rs. 80,000"
+            },
+            {
+                "opt": "Rs. 1,00,000"
+            },
+            {
+                "opt": "Rs. 2,00,00+"
+            }
+        ]
+    },
+    {
+        "message": "Kindly give me some time, I'll mail the itinerary to your registered mail address within 2 days!",
+        "clicked": false,
+        "options": [
+            {
+                "opt": "Okay"
+            }
+        ]
+    }
+]

@@ -1,0 +1,113 @@
+[
+    {
+        "message": "Hey! Today I'll help you write a review of your experience with us. Select the service you want to review from your recent purchases.",
+        "clicked": false,
+        "options": [
+            {
+                "opt": "Hotel Hoko"
+            },
+            {
+                "opt": "The salt Lake"
+            },
+            {
+                "opt": "Hotel paradise"
+            },
+            {
+                "opt": "Aluza Beach"
+            }
+        ]
+    },
+    {
+        "message": "Okay so rate the overall experience.",
+        "clicked": false,
+        "options": [
+            {
+                "opt": "1 star"
+            },
+            {
+                "opt": "2 stars"
+            },
+            {
+                "opt": "3 stars"
+            },
+            {
+                "opt": "4 stars"
+            },
+            {
+                "opt": "5 stars"
+            }
+        ]
+    },
+    {
+        "message": "Rate the location.",
+        "clicked": false,
+        "options": [
+            {
+                "opt": "1 star"
+            },
+            {
+                "opt": "2 stars"
+            },
+            {
+                "opt": "3 stars"
+            },
+            {
+                "opt": "4 stars"
+            },
+            {
+                "opt": "5 stars"
+            }
+        ]
+    },
+    {
+        "message": "Rate the cleanliness of the place.",
+        "clicked": false,
+        "options": [
+            {
+                "opt": "1 star"
+            },
+            {
+                "opt": "2 stars"
+            },
+            {
+                "opt": "3 stars"
+            },
+            {
+                "opt": "4 stars"
+            },
+            {
+                "opt": "5 stars"
+            }
+        ]
+    },
+    {
+        "message": "Rate the facilities present at the place.",
+        "clicked": false,
+        "options": [
+            {
+                "opt": "1 star"
+            },
+            {
+                "opt": "2 stars"
+            },
+            {
+                "opt": "3 stars"
+            },
+            {
+                "opt": "4 stars"
+            },
+            {
+                "opt": "5 stars"
+            }
+        ]
+    },
+    {
+        "message": "Thank you! Your feedback is valuable to us. It will help us make the experience better. Have a great day!",
+        "clicked": false,
+        "options": [
+            {
+                "opt": "Thank You"
+            }
+        ]
+    }
+]
