@@ -35,6 +35,12 @@
 
       </div>
     </ion-item>
+    <div *ngIf="showanim" class="animm">
+      <ion-avatar item-start><img class="avt" src="assets/imgs/bot-avatar.png">
+      </ion-avatar>
+      <lottie-animation-view (animCreated)="handleAnimation($event)" [options]="interactiveAnimationOption">
+      </lottie-animation-view>
+    </div>
   </ion-list>
 </ion-content>
 <ion-footer>

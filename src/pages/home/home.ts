@@ -20,8 +20,21 @@ export class HomePage {
   ques = [];
   resp = [];
   dat: Date;
+  showanim: boolean = false;
   private mutationObserver: MutationObserver;
+  selectedAnimation: any = "interactive";
+  animations: any;
+  interactive = false;
+  anim: any;
+  animationSpeed: number = 1;
 
+  interactiveAnimationOption = {
+    loop: true,
+    prerender: false,
+    autoplay: false,
+    autoloadSegments: false,
+    path: 'assets/anim/typing.json'
+  }
   constructor(public navCtrl: NavController, public viewCtrl: ViewController,
     private toastCtrl: ToastController, public http: Http) {
 
@@ -39,14 +52,30 @@ export class HomePage {
     this.content.scrollToBottom(300);
 
   }
+  handleAnimation(anim: any) {
+    this.anim = anim;
+    this.anim.play();
+    // this.anim.stop();
+  }
+  setSpeed(speed: number) {
+    this.animationSpeed = speed;
+    this.anim.setSpeed(speed);
+  }
   intro() {
 
-    this.messages.push({
+    this.pushmsg({
       "username": "bot",
       "message": "Welcome user what should I call you?"
     });
 
 
+  }
+  pushmsg(arg) {
+    this.showanim = true;
+    setTimeout(() => {
+      this.showanim = false;
+      this.messages.push(arg);
+    }, 3000);
   }
   sendMessage() {
     if (this.message != '') {
@@ -79,7 +108,7 @@ export class HomePage {
       { opt: "Bookings" }, { opt: "Meet the Developer" }, { opt: "Tell me a vacation joke?" },]
     }
     // console.log(body);
-    this.messages.push(body);
+    this.pushmsg(body);
   }
 
   usermsg(opt) {
@@ -98,7 +127,7 @@ export class HomePage {
         this.flowSelect();
         break;
       case "No":
-        this.messages.push({ username: "bot", message: "Thank you for using GoTravel bot! Bye bye :)" });
+        this.pushmsg({ username: "bot", message: "Thank you for using GoTravel bot! Bye bye :)" });
 
         break;
       case "Plan Itinerary":
@@ -127,7 +156,7 @@ export class HomePage {
         break;
       case "Meet the Developer":
         this.messages.push(body);
-        this.messages.push({
+        this.pushmsg({
           username: "bot",
           message: "Meet the developer : Shivang Kaul. He is proficient in front end and backend javascript frameworks and has worked on various Full stack Development projects. Find him on github/Linkedin.",
           img: "https://media-exp1.licdn.com/dms/image/C5103AQFHw4VEGY-JfQ/profile-displayphoto-shrink_100_100/0?e=1598486400&v=beta&t=f5T255OHQsfyEclZhX2Dh9Lf0ZmtFRl2U1uSj4QFqKc"
@@ -138,7 +167,7 @@ export class HomePage {
       case "Tell me a vacation joke?":
         this.messages.push(body);
 
-        this.messages.push({
+        this.pushmsg({
           username: "bot",
           message: "Due to Covid times, Travelling is not a joke. Stay home, Stay safe!"
         });
@@ -186,7 +215,7 @@ export class HomePage {
         options: ques[0].options,
         cal: ques[0].cala
       }
-      this.messages.push(body);
+      this.pushmsg(body);
       this.dat = null;
       this.dialogflow1(ques.shift());
     }
@@ -204,6 +233,6 @@ export class HomePage {
       message: "Thank you for using travel bot! Can I help you with something else?",
       options: [{ opt: "Yes" }, { opt: "No" }]
     }
-    this.messages.push(body);
+    this.pushmsg(body);
   }
 }
