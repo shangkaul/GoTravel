@@ -13,7 +13,7 @@ Alternatively I have provided the finished apks in the repo that can be installe
 There are 2 apks one for the dark version. The other one is with a lighter UI that I saw on pinterest and replicated.
 I have attached the screenshots of both.
 ![Dark UI]
-(https://srmpedia.files.wordpress.com/2020/06/gotraveldark.png?w=473)
+(https://srmpedia.files.wordpress.com/2020/06/gotraveldark.png)
 
 ![Light UI]
-(https://srmpedia.files.wordpress.com/2020/06/gotravellight.png?w=473)
+(https://srmpedia.files.wordpress.com/2020/06/gotravellight.png)
