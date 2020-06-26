@@ -9,4 +9,11 @@ To run the code on your machine:
 3. Clone the repo, run npm install
 4. You can serve the app using ionic serve
 
-Alternatively I have provided the finished apk in the repo that can be installed on android devices directly.
+Alternatively I have provided the finished apks in the repo that can be installed on android devices directly.
+There are 2 apks one for the dark version. The other one is with a lighter UI that I saw on pinterest and replicated.
+I have attached the screenshots of both.
+![Dark UI]
+(https://srmpedia.files.wordpress.com/2020/06/gotraveldark.png?w=473)
+
+![Light UI]
+(https://srmpedia.files.wordpress.com/2020/06/gotravellight.png?w=473)
